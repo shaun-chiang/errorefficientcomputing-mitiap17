@@ -1,0 +1,72 @@
+program mitLogoLightgrayBlack;
+
+init : image(format:png, width:96, height:96, filename:"none") =
+{
+	color0 := rgb(r:0.000000, g:0.000000, b:0.000000);
+	pen0 := pen(color:color0, width:0.005208);
+	shape0_0 := polygon(corners:{(0.000000, 0.000000), (96.000000, 0.000000)}, pen:pen0);
+	shape0_1 := polygon(corners:{(96.000000, 0.000000), (96.000000, 96.000000)}, pen:pen0);
+	shape0_2 := polygon(corners:{(96.000000, 96.000000), (0.000000, 96.000000)}, pen:pen0);
+	shape0_3 := polygon(corners:{(0.000000, 96.000000), (0.000000, 0.000000)}, pen:pen0);
+	path0 := path(subpaths:{shape0_0, shape0_1, shape0_2, shape0_3});
+	image0 = composite(a:path0, b:color0, op:atop, point:(0.000000, 0.000000));
+	image = composite(a:image, b:image0, op:atop);
+
+	color1 := rgb(r:0.760784, g:0.752941, b:0.749020);
+	shape1_0 := polygon(corners:{(0.000000, 0.000000), (10.667969, 0.000000)}, pen:pen0);
+	shape1_1 := polygon(corners:{(10.667969, 0.000000), (10.667969, 49.066406)}, pen:pen0);
+	shape1_2 := polygon(corners:{(10.667969, 49.066406), (0.000000, 49.066406)}, pen:pen0);
+	shape1_3 := polygon(corners:{(0.000000, 49.066406), (0.000000, 0.000000)}, pen:pen0);
+	path1 := path(subpaths:{shape1_0, shape1_1, shape1_2, shape1_3});
+	image1 = composite(a:path1, b:color1, op:atop, point:(0.000000, 0.000000));
+	image = composite(a:image, b:image1, op:atop);
+
+	shape2_0 := polygon(corners:{(17.066406, 0.000000), (27.734375, 0.000000)}, pen:pen0);
+	shape2_1 := polygon(corners:{(27.734375, 0.000000), (27.734375, 32.000000)}, pen:pen0);
+	shape2_2 := polygon(corners:{(27.734375, 32.000000), (17.066406, 32.000000)}, pen:pen0);
+	shape2_3 := polygon(corners:{(17.066406, 32.000000), (17.066406, 0.000000)}, pen:pen0);
+	path2 := path(subpaths:{shape2_0, shape2_1, shape2_2, shape2_3});
+	image2 = composite(a:path2, b:color1, op:atop, point:(0.177775, 0.000000));
+	image = composite(a:image, b:image2, op:atop);
+
+	shape3_0 := polygon(corners:{(34.132812, 0.000000), (44.800781, 0.000000)}, pen:pen0);
+	shape3_1 := polygon(corners:{(44.800781, 0.000000), (44.800781, 49.066406)}, pen:pen0);
+	shape3_2 := polygon(corners:{(44.800781, 49.066406), (34.132812, 49.066406)}, pen:pen0);
+	shape3_3 := polygon(corners:{(34.132812, 49.066406), (34.132812, 0.000000)}, pen:pen0);
+	path3 := path(subpaths:{shape3_0, shape3_1, shape3_2, shape3_3});
+	image3 = composite(a:path3, b:color1, op:atop, point:(0.355550, 0.000000));
+	image = composite(a:image, b:image3, op:atop);
+
+	shape4_0 := polygon(corners:{(51.199219, 0.000000), (61.867188, 0.000000)}, pen:pen0);
+	shape4_1 := polygon(corners:{(61.867188, 0.000000), (61.867188, 10.667969)}, pen:pen0);
+	shape4_2 := polygon(corners:{(61.867188, 10.667969), (51.199219, 10.667969)}, pen:pen0);
+	shape4_3 := polygon(corners:{(51.199219, 10.667969), (51.199219, 0.000000)}, pen:pen0);
+	path4 := path(subpaths:{shape4_0, shape4_1, shape4_2, shape4_3});
+	image4 = composite(a:path4, b:color1, op:atop, point:(0.533325, 0.000000));
+	image = composite(a:image, b:image4, op:atop);
+
+	color5 := rgb(r:1.000000, g:1.000000, b:1.000000);
+	shape5_0 := polygon(corners:{(51.199219, 17.066406), (61.867188, 17.066406)}, pen:pen0);
+	shape5_1 := polygon(corners:{(61.867188, 17.066406), (61.867188, 49.066406)}, pen:pen0);
+	shape5_2 := polygon(corners:{(61.867188, 49.066406), (51.199219, 49.066406)}, pen:pen0);
+	shape5_3 := polygon(corners:{(51.199219, 49.066406), (51.199219, 17.066406)}, pen:pen0);
+	path5 := path(subpaths:{shape5_0, shape5_1, shape5_2, shape5_3});
+	image5 = composite(a:path5, b:color5, op:atop, point:(0.533325, 0.177775));
+	image = composite(a:image, b:image5, op:atop);
+
+	shape6_0 := polygon(corners:{(68.265625, 0.000000), (96.000000, 0.000000)}, pen:pen0);
+	shape6_1 := polygon(corners:{(96.000000, 0.000000), (96.000000, 10.667969)}, pen:pen0);
+	shape6_2 := polygon(corners:{(96.000000, 10.667969), (68.265625, 10.667969)}, pen:pen0);
+	shape6_3 := polygon(corners:{(68.265625, 10.667969), (68.265625, 0.000000)}, pen:pen0);
+	path6 := path(subpaths:{shape6_0, shape6_1, shape6_2, shape6_3});
+	image6 = composite(a:path6, b:color1, op:atop, point:(0.711100, 0.000000));
+	image = composite(a:image, b:image6, op:atop);
+
+	shape7_0 := polygon(corners:{(68.265625, 17.066406), (78.933594, 17.066406)}, pen:pen0);
+	shape7_1 := polygon(corners:{(78.933594, 17.066406), (78.933594, 49.066406)}, pen:pen0);
+	shape7_2 := polygon(corners:{(78.933594, 49.066406), (68.265625, 49.066406)}, pen:pen0);
+	shape7_3 := polygon(corners:{(68.265625, 49.066406), (68.265625, 17.066406)}, pen:pen0);
+	path7 := path(subpaths:{shape7_0, shape7_1, shape7_2, shape7_3});
+	image7 = composite(a:path7, b:color1, op:atop, point:(0.711100, 0.177775));
+	image = composite(a:image, b:image7, op:atop);
+}
