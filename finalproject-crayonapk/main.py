@@ -1,14 +1,12 @@
 # main.py
 # Crayon Batch UI
 # Created by Shaun Chiang for mit iap '17 - Error Efficient Computing
-# Requires crayon binary.
+# Requires crayon binary, python 3.
 # Recursively looks through selected folder and applies crayon color transformations.
 
 from tkinter.filedialog import askdirectory, askopenfilename
 import os, tkinter as tk, tkinter.ttk
 from functools import partial
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 
 
 image_store = []
@@ -26,7 +24,9 @@ def go_callback(controller):
         for file in files:
             if file.endswith(".png"):
                 # run command here
-                os.system("{0} --lambda 0.000059 --bitmap {1}".format(crayonbin, rootdir))
+                print("{0} --lambda {1} --bitmap {2}".format(crayonbin.get(),lambda_value.get(), file))
+
+                os.system("{0} --lambda {1} --bitmap {2}".format(crayonbin.get(),lambda_value.get(), file))
                 # print(os.path.join(root,file))
                 # image_store.append(os.path.join(root,file))
 
@@ -57,8 +57,10 @@ class MainApplication(tk.Tk):
 
 class StartPage(tk.Frame):
     def __init__(self, parent, controller):
-        global crayonbin, rootdir
+        global crayonbin, rootdir,lambda_value
         tk.Frame.__init__(self,parent)
+        lambda_value = tk.StringVar()
+        lambda_value.set(0.0059)
         crayonbin = tk.StringVar()
         crayonbin.set("Set Crayon Binary Path...")
         rootdir = tk.StringVar()
@@ -70,6 +72,7 @@ class StartPage(tk.Frame):
         rootdir_label = tkinter.Label(self, textvariable=rootdir).grid(row=1, column=1)
         rootdir_button = tkinter.Button(self, text="Browse..", command=rootdir_callback).grid(row=1, column=2)
         go_button = tkinter.Button(self, text="Go!", command=partial(go_callback, controller)).grid(row=2, column=0)
+        entry = tkinter.Entry(self, textvariable = lambda_value).grid(row=2,column=1)
 
 
 
